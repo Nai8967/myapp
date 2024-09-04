@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Campo e-mail obrigatório.';
-                              } else if (value!.contains('#')) {
+                              } else if (value.contains('#')) {
                                 return null;
                               } else {
                                 return 'Você precisa de um e-mail válido.';
@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Campo email institucional obrigatório!';
-                              } else if (value!.contains('@')) {
+                              } else if (value.contains('@')) {
                                 return null;
                               } else {
                                 return 'Você precisa de uma senha válida!';
