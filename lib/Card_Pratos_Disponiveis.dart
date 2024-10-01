@@ -150,7 +150,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                           fontSize: 12,
                         ),
                       ),
-                      SizedBox(width: 78),
+                      SizedBox(width: 85),
                       Icon(
                         Icons.lock_clock,
                         color: Colors.red,

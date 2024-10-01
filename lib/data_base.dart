@@ -4,7 +4,7 @@ class Database {
   static List Pratos = [
     OpcoesAlmoco(
       urlImagem:
-          'https://img.cybercook.com.br/foodiefeed/qt1dtscnmng4uryoiigoh08tbx9ztnmknx7gjswe.jpeg',
+          'https://4.bp.blogspot.com/-X6QtAszOA6g/W8PuxmtYfNI/AAAAAAAAgDc/PqJzyNpt9EUbo55Nh7uCXWptQne5W-dcQCLcBGAs/s1600/prato-de-comida.jpg',
       titulo: 'TRADICIONAL',
       Descricao: 'SERVE 2 PESSOAS',
       opcao: 'COMPRAR',
@@ -26,7 +26,7 @@ class Database {
     ),
     OpcoesAlmoco(
       urlImagem:
-          'https://valepublicitando.com/wp-content/uploads/2019/07/Feijoada-do-Bar-do-Coronel-Divulga%C3%A7%C3%A3o-1024x682.jpg',
+          'https://img.freepik.com/photos-gratuite/plat-typique-bresilien-appele-feijoada-fait-haricots-noirs-du-porc-saucisses-vue-dessus_261158-1563.jpg?size=626&ext=jpg',
       titulo: 'FEIJOADA',
       Descricao: 'SERVE 3 PESSOAS',
       opcao: 'COMPRAR',
@@ -48,7 +48,7 @@ class Database {
     ),
     OpcoesAlmoco(
       urlImagem:
-          'https://diarioprime.com.br/vida-de-casa/wp-content/uploads/2021/12/1759609683-lasanha-de-frango-rose-768x512-1.jpg',
+    'https://www.comidaereceitas.com.br/wp-content/uploads/2017/09/feijoada3-780x439.jpg',
       titulo: 'LASANHA',
       Descricao: 'SERVE 1 PESSOA',
       opcao: 'COMPRAR',
