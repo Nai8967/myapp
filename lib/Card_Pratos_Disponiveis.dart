@@ -1,5 +1,7 @@
 import 'package:myapp/pratos_almoco.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/complementos.dart';
+
 
 class CardPratosDisponiveis extends StatefulWidget {
   final OpcoesAlmoco pratosDisponiveis;
@@ -80,15 +82,28 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 14),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        pacote.adc,
-                        style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 12,
+                      TextButton(
+                        onPressed: () {
+                          // Navega para a tela complementos
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return complementos();
+                              },
+                            ),
+                          );
+                        },
+                        child: Text(
+                          pacote.adc,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 12,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       Text(
@@ -150,7 +165,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                           fontSize: 12,
                         ),
                       ),
-                      SizedBox(width: 85),
+                      SizedBox(width: 78),
                       Icon(
                         Icons.lock_clock,
                         color: Colors.red,
