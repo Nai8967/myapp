@@ -1,3 +1,4 @@
+import 'package:myapp/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -41,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'Campo e-mail obrigatório.';
-                              } else if (value.contains('#')) {
+                              } else if (value!.contains('@')) {
                                 return null;
                               } else {
                                 return 'Você precisa de um e-mail válido.';
@@ -53,18 +54,17 @@ class _LoginPageState extends State<LoginPage> {
                               Icons.mail_outline_outlined,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 16,
                           ),
                           TextFormField(
                             controller: senhaController,
+                            obscureText: true,
                             validator: (value) {
-                              if (value!.isEmpty) {
-                                return 'Campo email institucional obrigatório!';
-                              } else if (value!.contains('@')) {
+                              if (value!.length >= 1) {
                                 return null;
                               } else {
-                                return 'Você precisa de uma senha válida!';
+                                return 'Você precisa de uma senha válida.';
                               }
                             },
                             cursorColor: const Color(0xFF10397B),
@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                               Icons.lock_outline,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           ElevatedButton(
@@ -84,14 +84,13 @@ class _LoginPageState extends State<LoginPage> {
                                 String email = emailController.text;
                                 String senha = senhaController.text;
 
-                                if (email == 'aula923@gmail.com' &&
-                                    senha == '9239232') {
+                                if (email == '@au' && senha == '2') {
                                   // Navegar p/ HomePage
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) {
-                                        return LoginPage();
+                                        return HomePage();
                                       },
                                     ),
                                   );
