@@ -1,5 +1,3 @@
-import 'package:myapp/complementos.dart';
-
 class OpcoesAlmoco {
   String urlImagem;
   String titulo;
