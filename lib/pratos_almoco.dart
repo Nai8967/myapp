@@ -1,3 +1,5 @@
+import 'package:myapp/complementos.dart';
+
 class OpcoesAlmoco {
   String urlImagem;
   String titulo;
@@ -7,6 +9,7 @@ class OpcoesAlmoco {
   String hora;
   String adc;
   double valor;
+  List<String> complementos;
 
   OpcoesAlmoco({
     required this.urlImagem,
@@ -17,5 +20,6 @@ class OpcoesAlmoco {
     required this.adc,
     required this.valor,
     required this.localizacao,
+    required this.complementos,
   });
 }

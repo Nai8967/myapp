@@ -1,7 +1,7 @@
 import 'package:myapp/pratos_almoco.dart';
 
 class Database {
-  static List Pratos = [
+  static List<OpcoesAlmoco> Pratos = [
     OpcoesAlmoco(
       urlImagem:
           'https://4.bp.blogspot.com/-X6QtAszOA6g/W8PuxmtYfNI/AAAAAAAAgDc/PqJzyNpt9EUbo55Nh7uCXWptQne5W-dcQCLcBGAs/s1600/prato-de-comida.jpg',
@@ -12,6 +12,7 @@ class Database {
       valor: 2.99,
       hora: 'DAS 08 - 22H',
       localizacao: 'ARAPIRACA',
+      complementos: ['FAROFA', 'LEGUMES COZIDOS', 'PURÊ DE BATATA', 'SALPICÃO'],
     ),
     OpcoesAlmoco(
       urlImagem:
@@ -23,6 +24,7 @@ class Database {
       valor: 1.99,
       hora: 'DAS 08 - 22H',
       localizacao: 'ARAPIRACA',
+      complementos: ['MACARRÃO', 'PURÊ DE BATATA', 'FRANGO', 'CARNE'],
     ),
     OpcoesAlmoco(
       urlImagem:
@@ -34,6 +36,7 @@ class Database {
       valor: 2.99,
       hora: 'DAS 08 - 22H',
       localizacao: 'ARAPIRACA',
+      complementos: ['PURÊ','MACARRÃO','BATATA FRITA', 'OVO DE CODORNA'],
     ),
     OpcoesAlmoco(
       urlImagem:
@@ -45,10 +48,11 @@ class Database {
       valor: 1.99,
       hora: 'DAS 08 - 22H',
       localizacao: 'ARAPIRACA',
+      complementos: ['ARROZ', 'FEIJÃO TROPEIRO', 'MACARRÃO', 'SALADA'],
     ),
     OpcoesAlmoco(
       urlImagem:
-    'https://www.comidaereceitas.com.br/wp-content/uploads/2017/09/feijoada3-780x439.jpg',
+          'https://www.comidaereceitas.com.br/wp-content/uploads/2017/09/feijoada3-780x439.jpg',
       titulo: 'LASANHA',
       Descricao: 'SERVE 1 PESSOA',
       opcao: 'COMPRAR',
@@ -56,6 +60,7 @@ class Database {
       valor: 1.99,
       hora: 'DAS 08 - 22H',
       localizacao: 'ARAPIRACA',
+      complementos:  ['FRANGO', 'PRESUNTO E QUEIJO', 'CARNE MOÍDA', 'ARROZ E BATATA FRITA'],
     ),
   ];
 }

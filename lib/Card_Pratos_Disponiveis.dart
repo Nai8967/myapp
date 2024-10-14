@@ -2,7 +2,6 @@ import 'package:myapp/pratos_almoco.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/complementos.dart';
 
-
 class CardPratosDisponiveis extends StatefulWidget {
   final OpcoesAlmoco pratosDisponiveis;
 
@@ -16,7 +15,7 @@ class CardPratosDisponiveis extends StatefulWidget {
 }
 
 class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
-  OpcoesAlmoco get pacote => widget.pratosDisponiveis;
+  OpcoesAlmoco get pratos => widget.pratosDisponiveis;
   int contador = 0;
 
   void incrementarContador() {
@@ -42,7 +41,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(pacote.urlImagem),
+            Image.network(pratos.urlImagem),
             Padding(
               padding: EdgeInsets.all(18.0),
               child: Column(
@@ -56,7 +55,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                         size: 30,
                       ),
                       Text(
-                        pacote.titulo,
+                        pratos.titulo,
                         style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 16,
@@ -88,17 +87,17 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                       TextButton(
                         onPressed: () {
                           // Navega para a tela complementos
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return complementos();
+                                return Complementos(pratos);
                               },
                             ),
                           );
                         },
                         child: Text(
-                          pacote.adc,
+                          pratos.adc,
                           style: const TextStyle(
                             fontWeight: FontWeight.normal,
                             fontSize: 12,
@@ -107,7 +106,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                         ),
                       ),
                       Text(
-                        pacote.Descricao,
+                        pratos.Descricao,
                         style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 12,
@@ -120,7 +119,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'R\$ ${pacote.valor}',
+                        'R\$ ${pratos.valor}',
                         style: TextStyle(
                           color: Colors.red,
                           fontWeight: FontWeight.bold,
@@ -136,7 +135,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                           ),
                           SizedBox(width: 8),
                           Text(
-                            '${pacote.opcao}',
+                            '${pratos.opcao}',
                             style: TextStyle(
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
@@ -158,7 +157,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                       ),
                       SizedBox(width: 4),
                       Text(
-                        '${pacote.localizacao}',
+                        '${pratos.localizacao}',
                         style: TextStyle(
                           color: Colors.red,
                           fontWeight: FontWeight.normal,
@@ -173,7 +172,7 @@ class _CardPratosDisponiveis extends State<CardPratosDisponiveis> {
                       ),
                       SizedBox(width: 4),
                       Text(
-                        '${pacote.hora}',
+                        '${pratos.hora}',
                         style: TextStyle(
                           color: Colors.red,
                           fontWeight: FontWeight.normal,
